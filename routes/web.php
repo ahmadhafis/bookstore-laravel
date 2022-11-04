@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BookstoreController;
+use App\Http\Controllers\LandingpageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/bookstore', [BookstoreController::class, 'index'])->name('bookstore.home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/landingpage', [LandingpageController::class], 'index')->name('landingpage');
